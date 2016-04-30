@@ -1,7 +1,7 @@
-{% extends "layout.html" %}
+{% extends "layouts/base.html" %}
 
 {% block content %}
     <h1>{{ message }}</h1>
-    <h2>{{ error,status }}</h2>
-    <pre>{{ error.stack  | unescape}} </pre>
+    <h2>{{ error.status }}</h2>
+    <pre>{{ error.stack }} </pre>
 {% endblock %}

@@ -3,7 +3,7 @@
 var Home = {
     
     index: function(req, res){
-      res.render('index', { title: 'Streams' });
+      res.render('home/index', { title: 'Streams' });
     }
     
 };
