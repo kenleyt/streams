@@ -1,10 +1,10 @@
-// Local deps 
-var About = require("./about");
-var Home = require("./home");
-var Users = require("./users");
+// Local dependencies
+var About = require('./about');
+var Home = require('./home');
+var Search = require('./search');
 
-module.exports= {
+module.exports = {
     About: About,
     Home: Home,
-    Users: Users
+    Search: Search
 };
