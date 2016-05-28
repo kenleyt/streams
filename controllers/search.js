@@ -12,11 +12,17 @@ var Search = {
     var hashtag = req.body.hashtag;
     var client = Helpers.getTwitterClient();
     var params = {
-      q: hashtag
+      q: hashtag,
+      lang: 'en', // only english tweets
+      result_type: 'mixed' , //mostpopular + recent
+      count: 30 // max num of tweets
     };
     
     client.get('search/tweets' , params, function(err, tweets ) {
-      console.log(tweets);
+      if (err){
+      console.log(err);
+      next(err);
+      };
         var data = {
           searchTerm: req.body.hashtag
         };

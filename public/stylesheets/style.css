@@ -3,9 +3,8 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: black;
   color: red;
-  background: url("https://wallpaperscraft.com/image/board_black_line_texture_background_wood_55220_1920x1080.jpg");
+  background-color:white ;
 }
-
 a {
   color: #00B7FF;
 }
