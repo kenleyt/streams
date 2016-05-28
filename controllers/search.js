@@ -1,4 +1,7 @@
 // Search controller
+
+// local dependecies
+var Helpers = require('../helpers')
 var Search = {
   
   index: function(req, res){
@@ -6,13 +9,28 @@ var Search = {
   },
   
   search: function(req, res, next){
-    var data = {
-      items: [0, 1, 2, 3, 4, 5],
-      numItems: 6,
-      searchTerm: req.body.hashtag
+    var hashtag = req.body.hashtag;
+    var client = Helpers.getTwitterClient();
+    var params = {
+      q: hashtag
     };
-    res.render('search/index', data);
+    
+    client.get('search/tweets' , params, function(err, tweets ) {
+      console.log(tweets);
+        var data = {
+          searchTerm: req.body.hashtag
+        };
+          if (tweets) {
+            
+          data.items = tweets.statuses,
+          data.numItems = data.items.length;
+          }
+        
+      res.render('search/index', data);
+    });
   }
 };
+   
+    
 
 module.exports = Search;

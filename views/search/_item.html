@@ -4,27 +4,23 @@
     <div class="row tweet-item-heading">
       <div class="col-sm-4 col-xs-12 tweet-user-avatar">
         <div class="media-middle">
-          <img class="media-object" src="/images/missing.png" />
+          <img class="media-object" src="{{ item.user.profile_image_url }}" />
         </div>
       </div><!-- .tweet-user-avatar -->
       <div class="col-sm-8 col-xs-12 tweet-user-info">
         <div class="row">
           <div class="col-xs-12 tweet-user-display-name">
-            <strong>John Doe</strong>
+            <strong> {{ item.user.name }}</strong>
           </div><!-- .tweet-user-display-name -->
           <div class="col-xs-12 tweet-user-handle">
-            <em>@johndoe</em>
+            <em>@{{ item.user.screen_name }}</em>
           </div><!-- .tweet-user-handle -->
         </div>
       </div><!-- .tweet-user-info -->
     </div><!-- .tweet-item-heading -->
     <div class="row tweet-item-content">
       <div class="col-xs-12 tweet-item-text">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Integer semper orci quis justo accumsan semper.
-          Vestibulum accumsan tortor posuere.
-        </p>
+        <p>{{ item.text }}</p>
       </div><!-- .tweet-item-text -->
     </div><!-- .tweet-item-content -->
     <div class="row tweet-item-footer">
@@ -33,19 +29,19 @@
           <div class="col-sm-6 col-xs-5 tweet-item-favorite">
             <span class="label label-default">
               <span class="glyphicon glyphicon-heart"></span>
-              <span>6</span>
+              <span>{{  item.favorite_count }}</span>
             </span>
           </div><!-- .tweet-item-favorite -->
           <div class="col-sm-6 col-xs-5 tweet-item-retweet">
             <span class="label label-default">
               <span class="glyphicon glyphicon-retweet"></span>
-              <span>11</span>
+              <span>{{  item.reweet_count }}</span>
             </span>
           </div><!-- .tweet-item-retweet -->
         </div>
       </div><!-- .tweet-item-counts -->
       <div class="col-sm-6 col-xs-12 tweet-item-time">
-        <small>1/10/16</small>
+        <small>{{ item.created_at }}</small>
       </div><!-- .tweet-item-time -->
     </div><!-- .tweet-item-footer -->
   </div><!-- .tweet-item -->

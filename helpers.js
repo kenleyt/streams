@@ -3,7 +3,7 @@
 
 var Twitter = require("twitter");
 
-var helpers = {};
+var Helpers = {};
 
 Helpers.getTwitterClient = function(){
 
