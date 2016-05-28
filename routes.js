@@ -14,7 +14,8 @@ var Router = {
         
         // Search
         app.get('/search', controllers.Search.index);
-        app.post('/search', controllers.Search.index);
+        app.post('/search', controllers.Search.search);
+        
     }
 
 };
