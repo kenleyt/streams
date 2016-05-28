@@ -9,9 +9,7 @@ body {
 a {
   color: #00B7FF;
 }
-div {
-  
-}
+
 P {
   font-size: 20px;
 }
@@ -56,4 +54,48 @@ P {
         display: block!important; 
         
     }
+}
+/* Append to styles.css */
+.tweet-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; 
+
+  /* From CSSmatic - http://www.cssmatic.com/box-shadow */
+  /* V: 4px; H: 4px; Blur: 6px; Color: #999 */
+  -webkit-box-shadow: 4px 4px 6px 0px rgba(153,153,153,1);
+  -moz-box-shadow: 4px 4px 6px 0px rgba(153,153,153,1);
+  box-shadow: 4px 4px 6px 0px rgba(153,153,153,1);
+}
+
+.tweet-item-container {
+  padding: 0;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+
+.tweet-item-counts .label {
+  display: inline-block;
+}
+
+.tweet-item-counts .glyphicon-heart {
+  /* Amaranth - http://www.htmlcsscolor.com/hex/E81C4F */
+  color: #e81c4f;
+}
+
+.tweet-item-counts .glyphicon-retweet {
+  /* Mountain Meadow - http://www.htmlcsscolor.com/hex/19CF86 */
+  color: #19cf86;
+}
+
+.tweet-item-text {
+  margin-top: 10px;
+}
+
+.tweet-user-avatar img {
+  width: 64px;
+  height: 64px;
 }

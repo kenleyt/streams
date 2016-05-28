@@ -1,24 +1,27 @@
+<!-- search/index.html -->
 {% extends "layouts/base.html" %}
 
 {% block content %}
 <div class="jumbotron">
-    <h1>Search</h1>
      <p class="lead">Search for a hashtag</p>
 
-    <form class="form-inline">
+    <form class="form-inline" action="/search" method="post" >
       <div class="form-group">
         <label class="sr-only" for="hashtag">Hashtag</label>
-        <input type="text" class="form-control" id="hashtag" placeholder="#nyot">
+        <input type="text" class="form-control" id="hashtag" name="hashtag" placeholder="#nyc, #Decision2016">
       </div>
       <button type="submit" class="btn btn-default">Search</button>
     </form>
-    
-     <h4>Search Results (172)</h4>
-     <div class="panel panel-default">
-         <div class="panel-body">
-            Basic Panel
-         </div>
-     </div>
-    
+</div>
+
+<h4>Search Results (172)</h4>
+<hr>
+
+<div class="container">
+  <div class="row tweets-container">
+    {% for i in range(0, 10) %}
+      {% include "search/_item.html" %}
+    {% endfor %}
+  </div>
 </div>
 {% endblock %}
