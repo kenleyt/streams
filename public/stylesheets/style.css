@@ -1,9 +1,8 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: black;
+  font: 14px 'Droid Sans', Helvetica, Arial, sans-serif;
   color: red;
-  background-color:white ;
+  background: url(http://corrupteddevelopment.com/wp-content/uploads/2011/09/green-rays.jpg;)
 }
 a {
   color: #00B7FF;
