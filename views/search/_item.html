@@ -1,4 +1,3 @@
-<!-- search/_item.html -->
 <div class="col-xs-4 tweet-item-container">
   <div class="tweet-item">
     <div class="row tweet-item-heading">
@@ -10,7 +9,7 @@
       <div class="col-sm-8 col-xs-12 tweet-user-info">
         <div class="row">
           <div class="col-xs-12 tweet-user-display-name">
-            <strong> {{ item.user.name }}</strong>
+            <strong>{{ item.user.name }}</strong>
           </div><!-- .tweet-user-display-name -->
           <div class="col-xs-12 tweet-user-handle">
             <em>@{{ item.user.screen_name }}</em>
@@ -29,19 +28,19 @@
           <div class="col-sm-6 col-xs-5 tweet-item-favorite">
             <span class="label label-default">
               <span class="glyphicon glyphicon-heart"></span>
-              <span>{{  item.favorite_count }}</span>
+              <span>{{ item.favorite_count }}</span>
             </span>
           </div><!-- .tweet-item-favorite -->
           <div class="col-sm-6 col-xs-5 tweet-item-retweet">
             <span class="label label-default">
               <span class="glyphicon glyphicon-retweet"></span>
-              <span>{{  item.reweet_count }}</span>
+              <span>{{ item.retweet_count }}</span>
             </span>
           </div><!-- .tweet-item-retweet -->
         </div>
       </div><!-- .tweet-item-counts -->
       <div class="col-sm-6 col-xs-12 tweet-item-time">
-        <small>{{ item.created_at }}</small>
+        <small data-date="{{ item.created_at }}">{{ item.created_at }}</small>
       </div><!-- .tweet-item-time -->
     </div><!-- .tweet-item-footer -->
   </div><!-- .tweet-item -->

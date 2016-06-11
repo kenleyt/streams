@@ -1,8 +1,14 @@
+.navbar{
+ background-color: red;
+}
+.jumbotron{
+  background-color: black;
+}
 body {
   padding: 50px;
   font: 14px 'Droid Sans', Helvetica, Arial, sans-serif;
-  color: red;
-  background: url(http://corrupteddevelopment.com/wp-content/uploads/2011/09/green-rays.jpg;)
+  color: white;
+  background: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTmtMmae4q4HFc-RswSajRxJtN-cj28Gz839Yejo6-GBr-_hsVC)
 }
 a {
   color: #00B7FF;
@@ -12,47 +18,7 @@ P {
   font-size: 20px;
 }
 
-@media (max-width: 768px) {
-    .navbar-header {
-        float: none;
-    }
-    .navbar-toggle {
-        display: block;
-    }
-    .navbar-collapse {
-        border-top: 1px solid transparent;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-    }
-    .navbar-collapse.collapse {
-        display: none!important;
-    }
-    .navbar-nav {
-        float: none!important;
-        margin: 7.5px -15px;
-    }
-    .navbar-nav>li {
-        float: none;
-    }
-    .navbar-nav>li>a {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    .navbar-text {
-        float: none;
-        margin: 15px 0;
-    }
-    /* since 3.1.0 */
-    .navbar-collapse.collapse.in { 
-        display: block!important;
-    }
-    .collapsing {
-        overflow: hidden!important;
-    }
-    .navbar-collapse.collapse.in {
-        display: block!important; 
-        
-    }
-}
+
 /* Append to styles.css */
 .tweet-item {
   border: 1px solid #ccc;
